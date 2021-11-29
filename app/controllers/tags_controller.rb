@@ -8,7 +8,7 @@ class TagsController < ApplicationController
 
   def show
     tag = Tag.find(params[:id])
-    render json: tag
+    render json: tag, each_serializer: PostSerializer
   end
 
   private
